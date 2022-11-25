@@ -13,4 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\SiteController@index');
+Route::namespace('App\Http\Controllers')->group(function(){
+    Route::get('/', 'SiteController@index');
+    Route::get('/shop', 'SiteController@shop');
+});
+
