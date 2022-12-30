@@ -18,3 +18,8 @@ Route::namespace('App\Http\Controllers')->group(function(){
     Route::get('/shop', 'SiteController@shop');
 });
 
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
